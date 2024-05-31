@@ -16,8 +16,8 @@ double[] CreeTab()
 //renvoit le nombre harmonique qui a été calculé.
 double CalculNombreHarmonique(int Hn)
 {
-    double NombreHarmonique = 1;
-    for (int i = 1; i < Hn; i++)
+    double NombreHarmonique=0;
+    for(int i = 1;i < Hn; i++)
     {
         NombreHarmonique += 1 / i;
     }
