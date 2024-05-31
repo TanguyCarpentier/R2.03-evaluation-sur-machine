@@ -1,8 +1,8 @@
-﻿//CreeTab est un sous-programme qui ne prends aucun
-//paramètre. Il demande le nombre d'éléments 
-//harmoniques qui corresponds à la taille du tableau.
-//Et il créer et return un tableau qui corresponds à la taille
-//Indiquée.
+﻿//CreeTab est un sous-programme qui ne prends aucun paramètre.
+//Il demande le nombre d'éléments harmoniques qui corresponds à la 
+//taille du tableau.Il créé et return un tableau qui corresponds
+// à la taille indiquée.
+
 double[] CreeTab()
 {
     int taille;
@@ -11,4 +11,17 @@ double[] CreeTab()
     double[] tab=new double[taille];
     return tab;
 }
+//CalculNombreHarmonique est un sous programme qui prends en paramètre
+//Hn qui est le nombre harmonique que l'on souhaite calculé et qui 
+//renvoit le nombre harmonique qui a été calculé.
+double CalculNombreHarmonique(int Hn)
+{
+    double NombreHarmonique = 1;
+    for (int i = 0; i < Hn; i++)
+    {
+        NombreHarmonique += 1 / i;
+    }
+    return NombreHarmonique;
+}
+
 
