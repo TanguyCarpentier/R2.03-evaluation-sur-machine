@@ -11,12 +11,12 @@ double[] CreeTab()
     double[] tab=new double[taille];
     return tab;
 }
-//CalculNombreHarmonique est un sous programme qui prends en paramètre
+//CalculNombreHarmonique est un sous-programme qui prends en paramètre
 //Hn qui est le nombre harmonique que l'on souhaite calculé et qui 
 //renvoit le nombre harmonique qui a été calculé.
 double CalculNombreHarmonique(int Hn)
 {
-    double NombreHarmonique = 1;
+    double NombreHarmonique = 0;
     for (int i = 0; i < Hn; i++)
     {
         NombreHarmonique += 1 / i;
@@ -24,4 +24,15 @@ double CalculNombreHarmonique(int Hn)
     return NombreHarmonique;
 }
 
+//AjoutNombreHarmoniqueDansTableau est un sous-programme qui prends en
+//paramètre un tableau. Puis remplit chaque élément du tableau par 
+//le nombre harmonique correspondant à son emplacement dans le tableau.
+double[] AjoutNombreHarmoniqueDansTableau(double[] Tableau)
+{
+    for (int i = 1;i < Tableau.Length; i++)
+    {
+        Tableau[i-1] = CalculNombreHarmonique(i);
+    }
+    return Tableau;
+}
 
